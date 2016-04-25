@@ -1,0 +1,11 @@
+[Unit]
+Description=Ganglia Monitor Daemon {{item.key}}
+After=network.target
+
+[Service]
+Type=forking
+PIDFile=/var/run/gmond-{{item.key}}.pid
+ExecStart={{ganglia_gmond_binary}} --conf={{ganglia_config_dir}}/gmond-{{item.key}}.conf --pid-file=/var/run/gmond-{{item.key}}.pid
+
+[Install]
+WantedBy=multi-user.target

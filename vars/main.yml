@@ -1,2 +1,6 @@
----
-# vars file for ansible-ganglia
+
+# Path to the ganglia configuration.
+ganglia_config_dir: /etc/ganglia
+
+# Location of the gmond binary.
+ganglia_gmond_binary: /usr/sbin/gmond

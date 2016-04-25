@@ -1,5 +1,9 @@
 ---
-- hosts: localhost
+- hosts: ganglia-meta
   remote_user: root
+  vars:
+    - is_ganglia_meta: true
+    - is_ganglia_web: true
+    - ganglia_web_enable: true
   roles:
     - ansible-ganglia
